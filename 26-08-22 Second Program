@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    char s[100];
+    int k,i;
+    printf("Enter string;\n");
+    scanf("%s",s);
+    int count=0,a=1;
+    for(i=0;s[i]!='\0';i++)
+    {
+        count++;
+    }
+    for(k=0;k<count;k++)
+    {
+        if(s[k]!=s[count-1-k])
+        {
+            a=0;
+            break;
+        }
+    }
+    if(a==1)
+    printf("palindrome");
+    else
+    printf("not palindrome");
+    return 0;
+}
